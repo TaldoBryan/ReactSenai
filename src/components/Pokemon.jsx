@@ -1,0 +1,19 @@
+
+function Pokemon({ poke }) {
+  return (
+    <div className="cardPokemon">
+      <h1>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</h1>
+
+      <img
+        src={poke.sprites.front_default}
+        alt={poke.name}
+      />
+
+      <h2>
+        Types: {poke.types.map((item) => item.type.name).join(", ")}
+      </h2>
+    </div>
+  );
+}
+
+export default Pokemon;
