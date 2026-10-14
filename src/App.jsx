@@ -4,6 +4,7 @@ import axios from "axios";
 import Personagem from "./components/Personagem";
 import Pokemon from "./components/Pokemon";
 import BuscaFilme from "./components/BuscaFilmes";
+import Nome from "./components/Nome"
 
 function App() {
   const [personagem, setPersonagem] = useState(null);
@@ -46,7 +47,8 @@ function App() {
   return (
     <>
       <BuscaFilme />
-      <div   style={{
+      <Nome />
+      <div   style={{ //Eu não estava conseguindo deixar eles lado a lado na pagina do CSS então tentei por aqui
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
