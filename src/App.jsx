@@ -16,7 +16,7 @@ function App() {
     const getData = async () => {
       try {
         const res2 = await axios.get(
-          "https://dragonball-api.com/api/characters/66"
+          "https://dragonball-api.com/api/characters/68"
         );
 
         const res3 = await axios.get(
