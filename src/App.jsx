@@ -47,16 +47,15 @@ function App() {
   return (
     <>
       <BuscaFilme />
+      <br />
       <Nome />
-      <div   style={{ //Eu não estava conseguindo deixar eles lado a lado na pagina do CSS então tentei por aqui
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "flex-start",
-    gap: "30px",
-    width: "100%",
-  }}>
+      <div>
+        <br />
+        <h1>Personagem Favorito de DBZ</h1>
+        <br />
       {personagem && <Personagem personagem={personagem} />}
+      <br />
+      <h1>Meu Pet</h1>
       {poke && <Pokemon poke={poke} />}
       </div>
     </>

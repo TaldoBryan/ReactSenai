@@ -2,7 +2,7 @@
 function Personagem({ personagem }) {
   return (
     <div className="cardPersonagem">
-      <h1>{personagem.name}</h1>
+      <h2>{personagem.name}</h2>
 
       <img
         src={personagem.image}
@@ -12,10 +12,11 @@ function Personagem({ personagem }) {
 
       <h2>Ki = {personagem.ki}</h2>
       <h2>Raça = {personagem.race}</h2>
-
+      <br />
+      <h1>Transformação Favorita dele:</h1>
       {personagem.transformations?.[1] && (
         <>
-          <h1>{personagem.transformations[1].name}</h1>
+          <h2>{personagem.transformations[1].name}</h2>
 
           <img
             src={personagem.transformations[1].image}

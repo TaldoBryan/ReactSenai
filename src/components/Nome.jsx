@@ -34,7 +34,7 @@ function Person() {
     <div>
 
         <div>
-          <h1>{person[4]?.nome}</h1>
+          <h1>{person[4]?.nome} {person[4].sobrenome}</h1>
         </div>
     </div>
   );
