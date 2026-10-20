@@ -5,6 +5,7 @@ import Personagem from "./components/Personagem";
 import Pokemon from "./components/Pokemon";
 import BuscaFilme from "./components/BuscaFilmes";
 import Nome from "./components/Nome"
+import ThemeButton from "./components/ThemeButton"
 
 function App() {
   const [personagem, setPersonagem] = useState(null);
@@ -46,6 +47,9 @@ function App() {
 
   return (
     <>
+      <div>
+        <ThemeButton />
+      </div>
       <BuscaFilme />
       <br />
       <Nome />
@@ -58,6 +62,8 @@ function App() {
       <h1>Meu Pet</h1>
       {poke && <Pokemon poke={poke} />}
       </div>
+      <br />
+      
     </>
   );
 }
