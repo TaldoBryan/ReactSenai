@@ -192,6 +192,7 @@
   width: 100%;
   box-sizing: border-box;
   outline: 3px solid red;
+  flex-wrap: nowrap;
 }
 
 .card-personagem,

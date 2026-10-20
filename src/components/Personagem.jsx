@@ -1,7 +1,7 @@
 
 function Personagem({ personagem }) {
   return (
-    <div className="cardPersonagem">
+    <div className="card-personagem">
       <h2>{personagem.name}</h2>
 
       <img

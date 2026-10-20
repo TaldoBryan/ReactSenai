@@ -57,10 +57,12 @@ function App() {
         <br />
         <h1>Personagem Favorito de DBZ</h1>
         <br />
-      {personagem && <Personagem personagem={personagem} />}
-      <br />
-      <h1>Meu Pet</h1>
-      {poke && <Pokemon poke={poke} />}
+        <div className="dupla">
+          {personagem && <Personagem personagem={personagem} />}
+          <h1>Meu Pet</h1>
+          {poke && <Pokemon poke={poke} />}
+        </div>
+      
       </div>
       <br />
       

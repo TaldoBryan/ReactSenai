@@ -1,7 +1,7 @@
 
 function Pokemon({ poke }) {
   return (
-    <div className="cardPokemon">
+    <div className="card-pokemon">
       <h2>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</h2>
 
       <img
