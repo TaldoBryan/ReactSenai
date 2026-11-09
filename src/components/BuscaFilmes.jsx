@@ -5,6 +5,7 @@ import axios from "axios";
 function BuscaFilme() {
   const [nomeFilme, setNomeFilme] = useState("");
   const [filmes, setFilmes] = useState([]);
+  const [buscaRealizada, setBuscaRealizada] = useState(false);
 
     useEffect(() => {
     const tempo = setTimeout(() => {
@@ -22,8 +23,8 @@ function BuscaFilme() {
     const resposta = await axios.get(
       `https://www.omdbapi.com/?s=${nomeFilme}&apikey=52a3729b`
     );
-
-    setFilmes(resposta.data.Search);
+    setFilmes(resposta.data.Search || []);
+    setBuscaRealizada(true);
   }
 
   return (
@@ -36,8 +37,11 @@ function BuscaFilme() {
         value={nomeFilme}
         onChange={(e) => setNomeFilme(e.target.value)}
       />
+      {buscaRealizada && filmes.length === 0 &&(
+        <p>Nenhum filme encontrado</p>
+      )}
 
-      {filmes.map((filme) => (
+      {Array.isArray(filmes) && filmes.map((filme) => (
         <div key={filme.imdbID}>
             <h3>{filme.Title}</h3>
             <p>{filme.Year}</p>
