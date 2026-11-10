@@ -6,6 +6,7 @@ import Pokemon from "./components/Pokemon";
 import BuscaFilme from "./components/BuscaFilmes";
 import Nome from "./components/Nome"
 import ThemeButton from "./components/ThemeButton"
+import Footer from "./components/Footer.jsx";
 
 function App() {
   const [personagem, setPersonagem] = useState(null);
@@ -62,7 +63,7 @@ function App() {
           <h1>Meu Pet</h1>
           {poke && <Pokemon poke={poke} />}
         </div>
-      
+      <Footer />
       </div>
       <br />
       
