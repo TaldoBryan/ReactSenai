@@ -204,11 +204,12 @@
 /* FOOTER */
 
 .footer {
-  background: #090b12;
-  color: #e5e7eb;
+  background: var(--bg);
+  color: var(--text-h);
   padding: 30px 20px;
   text-align: center;
   margin-top: 50px;
+  border-top: 1px solid var(--border);
 }
 
 .footer .footer-links {
@@ -224,7 +225,7 @@
 .footer .footer-links a:link,
 .footer .footer-links a:visited,
 .footer .footer-links a:active {
-  color: #e5e7eb;
+  color: var(--text-h);
   text-decoration: none;
   display: block;
   width: auto;
@@ -232,12 +233,12 @@
 }
 
 .footer .footer-links a:hover {
-  color: #ffffff;
+  color: var(--accent);
 }
 
 .footer-copy {
   font-size: 13px;
-  color: #9ca3af;
+  color: var(--text);
 }
 
 /* RESPONSIVIDADE */
