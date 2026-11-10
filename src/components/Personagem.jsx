@@ -13,7 +13,7 @@ function Personagem({ personagem }) {
       <h2>Ki = {personagem.ki}</h2>
       <h2>Raça = {personagem.race}</h2>
       <br />
-      <h1>Transformação Favorita dele:</h1>
+      <h2>Transformação Favorita dele:</h2>
       {personagem.transformations?.[0] && (
         <>
           <h2>{personagem.transformations[0].name}</h2>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "./app.css";
 
 import Personagem from "./components/Personagem";
 import Pokemon from "./components/Pokemon";
@@ -56,13 +57,17 @@ function App() {
       <Nome />
       <div>
         <br />
-        <h1>Personagem Favorito de DBZ</h1>
-        <br />
         <div className="dupla">
+        <section className="coluna coluna-dbz">
+          <h2>Personagens de DBZ</h2>
           {personagem && <Personagem personagem={personagem} />}
-          <h1>Meu Pet</h1>
+        </section>
+
+        <section className="coluna coluna-pet">
+          <h2>Meu Pet</h2>
           {poke && <Pokemon poke={poke} />}
-        </div>
+        </section>
+      </div>
       <Footer />
       </div>
       <br />

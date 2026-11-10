@@ -3,7 +3,7 @@ function Footer() {
     <footer className="footer">
       <p>Desenvolvido por <strong>Bryan Carvalho</strong></p>
 
-      <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", gap: "30px" }}>
+      <div className="footer-links">
         <a
           href="https://www.linkedin.com/in/bryan-carvalho-de-oliveira-b22b06191/"
           target="_blank"
