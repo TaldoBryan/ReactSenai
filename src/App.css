@@ -167,7 +167,7 @@
 
 .coluna-pet {
   border-left: 1px solid rgba(96, 165, 250, 0.5);
-
+}
 .card-personagem,
 .card-pokemon {
   min-width: 0;
@@ -315,5 +315,4 @@
 .random-encounter-wrapper {
     display: flex;
     justify-content: center;
-    width: 100%;
-}
+    width: 100%;}
