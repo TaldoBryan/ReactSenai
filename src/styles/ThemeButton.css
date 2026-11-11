@@ -1,0 +1,26 @@
+
+.theme-button {
+    padding: 9px 16px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+
+    background-color: #172033;
+    color: #dbeafe;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.theme-button:hover {
+    background-color: #24344d;
+    border-color: #3b82f6;
+}
+
+.theme-button:focus-visible {
+    outline: 2px solid #60a5fa;
+    outline-offset: 3px;
+}

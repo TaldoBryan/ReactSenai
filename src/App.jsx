@@ -8,6 +8,8 @@ import BuscaFilme from "./components/BuscaFilmes";
 import Nome from "./components/Nome"
 import ThemeButton from "./components/ThemeButton"
 import Footer from "./components/Footer.jsx";
+import RandomEncounter from "./components/RandomEncounter.jsx";
+import Header from "./components/Header.jsx";
 
 function App() {
   const [personagem, setPersonagem] = useState(null);
@@ -49,11 +51,7 @@ function App() {
 
   return (
     <>
-      <div>
-        <ThemeButton />
-      </div>
-      <BuscaFilme />
-      <br />
+      <Header />
       <Nome />
       <div>
         <br />
@@ -66,7 +64,13 @@ function App() {
         <section className="coluna coluna-pet">
           <h2>Meu Pet</h2>
           {poke && <Pokemon poke={poke} />}
+          <br />
+          <div className="random-encounter-wrapper">
+            <RandomEncounter />
+          </div>
+          
         </section>
+
       </div>
       <Footer />
       </div>
@@ -75,5 +79,4 @@ function App() {
     </>
   );
 }
-
 export default App;

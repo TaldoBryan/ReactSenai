@@ -167,7 +167,6 @@
 
 .coluna-pet {
   border-left: 1px solid rgba(96, 165, 250, 0.5);
-}
 
 .card-personagem,
 .card-pokemon {
@@ -282,4 +281,39 @@
   #spacer {
     height: 48px;
   }
+}
+
+.pokemon-tipos {
+    display: flex;
+    gap: 10px;
+}
+
+.pokemon-tipos span {
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+}
+
+.random-encounter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 15px;
+
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.random-encounter-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }

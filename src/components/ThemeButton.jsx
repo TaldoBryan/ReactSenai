@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../styles/ThemeButton.css"
 
 function themeButton(){
     const [darkMode, setDarkMode] = useState(true)
@@ -12,7 +13,12 @@ function themeButton(){
     }
 
     return(
-        <button onClick={mudarTema}>
+        <button
+        className="theme-button"
+        onClick={mudarTema}
+        type="button"
+        aria-pressed={darkMode}
+        >
         {darkMode? "Tema Claro": "Tema Escuro"}
         </button>
     )
