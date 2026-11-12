@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "../styles/RandomEncounter.css"
+import PokemonCard from "./PokemonCard";
 
 function RandomEncounter(){
     const [pokemon, setPokemon] = useState(null);
@@ -41,18 +42,17 @@ function RandomEncounter(){
             {loading && <p>Procurando um Pokémon...</p>}
             {error && <p>{error}</p>}
             {pokemon && (
-                <article>
-                    <h3>{pokemon.name}</h3>
-                    <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-
-                    <div className="pokemon-tipos">
-                        {pokemon.types.map((item)=>(
-                            <span key={item.type.name}>
-                                {item.type.name}
-                            </span>
-                        ))}
-                    </div>
-                </article>
+                <PokemonCard
+                    nome={pokemon.name}
+                    imagem={
+                        pokemon.sprites.other["official-artwork"].front_default ||
+                        pokemon.sprites.front_default
+                    }
+                    vida={pokemon.stats[0].base_stat}
+                    ataque={pokemon.stats[1].base_stat}
+                    tipo={pokemon.types[0].type.name}
+                    tipos={pokemon.types.map((item) => item.type.name)}
+                />
             )}
         </section>
     );

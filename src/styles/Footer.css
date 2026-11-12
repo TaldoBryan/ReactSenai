@@ -72,3 +72,50 @@
         gap: 10px;
     }
 }
+
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    background: var(--social-bg);
+    color: var(--text-h);
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: background 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.footer-links a:hover {
+    background: #172033;
+    border-color: #3b82f6;
+    transform: translateY(-3px);
+}
+
+.footer-links img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.linkedin-logo {
+    filter: invert(26%) sepia(88%) saturate(1352%)
+            hue-rotate(178deg) brightness(93%) contrast(92%);
+}

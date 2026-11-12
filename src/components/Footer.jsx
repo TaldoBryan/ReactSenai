@@ -10,14 +10,19 @@ function Footer() {
           href="https://www.linkedin.com/in/bryan-carvalho-de-oliveira-b22b06191/"
           target="_blank"
           rel="noopener noreferrer"
-        >LinkedIn
+        >
+          <img
+          className="linkedin-logo"
+          src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/svgs/brands/linkedin.svg" alt="" />
+          LinkedIn
         </a>
 
         <a
           href="https://github.com/TaldoBryan/ReactSenai"
           target="_blank"
           rel="noopener noreferrer"
-        >GitHub
+        > <img src="https://cdn.simpleicons.org/github/FFFFFF" alt="" />
+          GitHub
         </a>
       </div>
 
