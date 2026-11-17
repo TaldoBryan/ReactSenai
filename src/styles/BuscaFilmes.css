@@ -86,3 +86,17 @@
     opacity: 0.4;
     cursor: not-allowed;
 }
+
+
+.resultado-filmes {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 25px 16px;
+  box-sizing: border-box;
+}
+
+.resultado-filmes .filme-card {
+  width: 300px;
+  max-width: 100%;
+}

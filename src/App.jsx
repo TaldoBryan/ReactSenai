@@ -1,82 +1,19 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Personagem from "./components/Personagem";
-import Pokemon from "./components/Pokemon";
-import BuscaFilme from "./components/BuscaFilmes";
-import Nome from "./components/Nome"
-import ThemeButton from "./components/ThemeButton"
-import Footer from "./components/Footer.jsx";
-import RandomEncounter from "./components/RandomEncounter.jsx";
-import Header from "./components/Header.jsx";
+import Home from "./pages/Home.jsx";
+import FilmesPages from "./pages/FilmePages.jsx";
+import PokemonPage from "./pages/PokemonPage.jsx";
 
 function App() {
-  const [personagem, setPersonagem] = useState(null);
-  const [poke, setPoke] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const res2 = await axios.get(
-          "https://dragonball-api.com/api/characters/68"
-        );
-
-        const res3 = await axios.get(
-          "https://pokeapi.co/api/v2/pokemon/garchomp"
-        );
-
-        setPersonagem(res2.data);
-        setPoke(res3.data);
-      } catch (e) {
-        console.error("Erro ao carregar API", e);
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    getData();
-  }, []);
-
-  if (loading) {
-    return <div>Carregando...</div>;
-  }
-
-  if (error) {
-    return <div>Erro ao carregar.</div>;
-  }
-
   return (
-    <>
-      <Header />
-      <Nome />
-      <div>
-        <br />
-        <div className="dupla">
-        <section className="coluna coluna-dbz">
-          <h2>Personagens de DBZ</h2>
-          {personagem && <Personagem personagem={personagem} />}
-        </section>
-
-        <section className="coluna coluna-pet">
-          <h2>Meu Pet</h2>
-          {poke && <Pokemon poke={poke} />}
-          <br />
-          <div className="random-encounter-wrapper">
-            <RandomEncounter />
-          </div>
-          
-        </section>
-
-      </div>
-      <Footer />
-      </div>
-      <br />
-      
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/filmes" element={<FilmesPages />} />
+        <Route path="/pokemon" element={<PokemonPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
+
 export default App;
