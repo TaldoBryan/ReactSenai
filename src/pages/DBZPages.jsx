@@ -10,7 +10,7 @@ export default function DBZPages(){
     if(error) return <p>Falha ao Carregar Personagem.</p>
     return(
     <>
-        <Header />
+        <Header mostrarBusca={false} />
         <main>
             {personagem && <Personagem personagem={personagem} />}
         </main>
