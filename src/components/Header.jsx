@@ -12,6 +12,7 @@ function Header({ nomeFilme, setNomeFilme, mostrarBusca = true }) {
             <Link to="/">Home</Link>
             <Link to="/filmes">Filmes</Link>
             <Link to="/pokemon">Pokémon</Link>
+            <Link to="/dbz">Dragon Ball</Link>
         </nav>
 
       <ThemeButton />
